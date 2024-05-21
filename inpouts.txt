@@ -1,0 +1,69 @@
+1. Register page
+	Inputs:
+		Member name
+		Password
+		Email address
+	Expected Outputs:
+		A validation error, or in case the fields are all correct, a success message
+	Actual Outputs:
+		Redirect to payment page - design error
+
+2. Login form
+	Inputs:
+		Username: design inconsistency
+		Password
+	Expected outputs:
+		Redirect to home page where user is logged in
+	Actual Outputs:
+		Could not be tested because of above
+
+3. Tour Our Website Builder button
+	Inputs: 
+		Click on button
+	Expected outputs:
+		Website Builder presentation
+	Actual Outputs:
+		As expected
+
+4. View More Of Our Services button
+	Inputs: 
+		Click on button
+	Expected outputs:
+		More Services presentation
+	Actual Outputs:
+		As expected
+
+5. Get Your Own Domain form
+	Inputs:
+		Domain name
+	Expected outputs:
+		Domain availability
+	Actual outputs:
+		Error page - not taking domain registrations anymore
+
+6. Build A Website Now button
+	Inputs: 
+		Click on button
+	Expected outputs:
+		Website builder when logged in or register page
+	Actual outputs:
+		As expected
+
+7. Browse More Styles button
+	Inputs:
+		Click on button
+		Click on template
+	Expected outputs:
+		Page with template in detail
+		Placeholders
+	Actual outputs:
+		Empty page
+
+8. Advertisement section
+	ERR: section is empty	
+	Inputs:
+		Click on button
+	Expected Outputs:
+		Advertisement page
+	Actual outputs:
+		Blank page

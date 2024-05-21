@@ -1,0 +1,129 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-05-17T16:19:54.599Z",
+    "end": "2024-05-17T16:20:13.760Z",
+    "duration": 19161,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e7f97859-7773-43fb-aefa-74c7f5fc8d0e",
+      "title": "",
+      "fullFile": "cypress/e2e/RegisterPage.cy.js",
+      "file": "cypress/e2e/RegisterPage.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e319b972-7f1a-4660-b2d8-88a4c05a4c88",
+          "title": "Register page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "EXPECTED: Should take us to the register page",
+              "fullTitle": "Register page EXPECTED: Should take us to the register page",
+              "timedOut": null,
+              "duration": 13292,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"header\").first().as(\"header\").within(() => {\n  cy.get(\"[title='Sign up for a FREE Angelfire account']\").as(\"Register button\").click();\n});",
+              "err": {
+                "message": "CypressError: Timed out after waiting `10000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `10000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.config.js` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.",
+                "estack": "CypressError: Timed out after waiting `10000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `10000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.config.js` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.\n    at timedOutWaitingForPageLoad (https://www.angelfire.lycos.com/__cypress/runner/cypress_runner.js:130511:64)\n    at <unknown> (https://www.angelfire.lycos.com/__cypress/runner/cypress_runner.js:130827:16)\n    at tryCatcher (https://www.angelfire.lycos.com/__cypress/runner/cypress_runner.js:1807:23)\n    at <unknown> (https://www.angelfire.lycos.com/__cypress/runner/cypress_runner.js:4186:41)\n    at tryCatcher (https://www.angelfire.lycos.com/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise._settlePromiseFromHandler (https://www.angelfire.lycos.com/__cypress/runner/cypress_runner.js:1519:31)\n    at Promise._settlePromise (https://www.angelfire.lycos.com/__cypress/runner/cypress_runner.js:1576:18)\n    at Promise._settlePromise0 (https://www.angelfire.lycos.com/__cypress/runner/cypress_runner.js:1621:10)\n    at Promise._settlePromises (https://www.angelfire.lycos.com/__cypress/runner/cypress_runner.js:1697:18)\n    at _drainQueueStep (https://www.angelfire.lycos.com/__cypress/runner/cypress_runner.js:2407:12)\n    at _drainQueue (https://www.angelfire.lycos.com/__cypress/runner/cypress_runner.js:2400:9)\n    at Async._drainQueues (https://www.angelfire.lycos.com/__cypress/runner/cypress_runner.js:2416:5)\n    at Async.drainQueues (https://www.angelfire.lycos.com/__cypress/runner/cypress_runner.js:2286:14)",
+                "diff": null
+              },
+              "uuid": "e77a6afb-82d1-47ce-b595-d57d0a4747be",
+              "parentUUID": "e319b972-7f1a-4660-b2d8-88a4c05a4c88",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "ACTUAL: Page doesn't exist, or it doesn't load, so there should be nothing there",
+              "fullTitle": "Register page ACTUAL: Page doesn't exist, or it doesn't load, so there should be nothing there",
+              "timedOut": null,
+              "duration": 1853,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"header\").first().as(\"header\").within(() => {\n  cy.get(\"[title='Sign up for a FREE Angelfire account']\").as(\"Register button\");\n  cy.should(\"exist\");\n});",
+              "err": {},
+              "uuid": "87e0e0d0-e324-42d6-a74b-b988bc8322e2",
+              "parentUUID": "e319b972-7f1a-4660-b2d8-88a4c05a4c88",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "87e0e0d0-e324-42d6-a74b-b988bc8322e2"
+          ],
+          "failures": [
+            "e77a6afb-82d1-47ce-b595-d57d0a4747be"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 15145,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mocha",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

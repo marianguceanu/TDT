@@ -1,0 +1,394 @@
+{
+  "stats": {
+    "suites": 4,
+    "tests": 9,
+    "passes": 5,
+    "pending": 0,
+    "failures": 4,
+    "testsRegistered": 9,
+    "passPercent": 55.55555555555556,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "start": "2024-05-17T16:19:09.033Z",
+    "end": "2024-05-17T16:20:39.732Z",
+    "duration": 90699
+  },
+  "results": [
+    {
+      "uuid": "4e6cf73e-bee5-4caa-b7a7-50526028d4f5",
+      "title": "",
+      "fullFile": "cypress/e2e/Login.cy.js",
+      "file": "cypress/e2e/Login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b2e985d0-291f-420c-9cbe-7d7500b7c2d9",
+          "title": "Login form",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "EXPECTED: Should open the login form. complete the form then invalidate the request because register was unsucessful",
+              "fullTitle": "Login form EXPECTED: Should open the login form. complete the form then invalidate the request because register was unsucessful",
+              "timedOut": null,
+              "duration": 14690,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"header\").first().as(\"header\").within(() => {\n  cy.get(\"[title='Login']\").as(\"Login button\").click();\n  cy.log(\"Opening login form\");\n  cy.get(\"input[id='username']\").should(\"be.visible\").type(\"testuser\");\n  cy.get(\"input[id='passWORD']\").should(\"be.visible\").type(\"testpassword\");\n  cy.log(\"Submitting login form will send us to an unavailable page, that cannot be accessed, therefore test will fail\");\n  cy.get(\"input[type='submit']\").click();\n});",
+              "err": {
+                "message": "CypressError: Timed out after waiting `10000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `10000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.config.js` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.",
+                "estack": "CypressError: Timed out after waiting `10000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `10000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.config.js` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.\n    at timedOutWaitingForPageLoad (https://www.angelfire.lycos.com/__cypress/runner/cypress_runner.js:130511:64)\n    at <unknown> (https://www.angelfire.lycos.com/__cypress/runner/cypress_runner.js:130827:16)\n    at tryCatcher (https://www.angelfire.lycos.com/__cypress/runner/cypress_runner.js:1807:23)\n    at <unknown> (https://www.angelfire.lycos.com/__cypress/runner/cypress_runner.js:4186:41)\n    at tryCatcher (https://www.angelfire.lycos.com/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise._settlePromiseFromHandler (https://www.angelfire.lycos.com/__cypress/runner/cypress_runner.js:1519:31)\n    at Promise._settlePromise (https://www.angelfire.lycos.com/__cypress/runner/cypress_runner.js:1576:18)\n    at Promise._settlePromise0 (https://www.angelfire.lycos.com/__cypress/runner/cypress_runner.js:1621:10)\n    at Promise._settlePromises (https://www.angelfire.lycos.com/__cypress/runner/cypress_runner.js:1697:18)\n    at _drainQueueStep (https://www.angelfire.lycos.com/__cypress/runner/cypress_runner.js:2407:12)\n    at _drainQueue (https://www.angelfire.lycos.com/__cypress/runner/cypress_runner.js:2400:9)\n    at Async._drainQueues (https://www.angelfire.lycos.com/__cypress/runner/cypress_runner.js:2416:5)\n    at Async.drainQueues (https://www.angelfire.lycos.com/__cypress/runner/cypress_runner.js:2286:14)",
+                "diff": null
+              },
+              "uuid": "a2e67167-6272-46bf-a8f3-fbdeb0c015b7",
+              "parentUUID": "b2e985d0-291f-420c-9cbe-7d7500b7c2d9",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "ACTUAL: Page doesn't exist, or it doesn't load, so there is nothing there",
+              "fullTitle": "Login form ACTUAL: Page doesn't exist, or it doesn't load, so there is nothing there",
+              "timedOut": null,
+              "duration": 3028,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"header\").first().as(\"header\").within(() => {\n  cy.get(\"[title='Login']\").as(\"Login button\").should(\"be.visible\").click();\n  cy.log(\"Opening login form\");\n  cy.get(\"input[id='username']\").should(\"be.visible\").type(\"testuser\");\n  cy.get(\"input[id='passWORD']\").should(\"be.visible\").type(\"testpassword\");\n  cy.log(\"Submitting login form will send us to an unavailable page, that cannot be accessed\");\n  cy.get(\"input[type='submit']\").should(\"be.visible\");\n  cy.should(\"exist\");\n});",
+              "err": {},
+              "uuid": "17c518ad-a4fc-4b6e-84b6-e3545365cb5d",
+              "parentUUID": "b2e985d0-291f-420c-9cbe-7d7500b7c2d9",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should contain a form, and not a new page, to prove design incosistency",
+              "fullTitle": "Login form Should contain a form, and not a new page, to prove design incosistency",
+              "timedOut": null,
+              "duration": 2866,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"header\").first().as(\"header\").within(() => {\n  cy.get(\"[title='Login']\").as(\"Login button\").should(\"be.visible\").click();\n  cy.log(\"Opening login form\");\n  cy.get(\"input[id='username']\").should(\"be.visible\").type(\"testuser\");\n  cy.get(\"input[id='passWORD']\").should(\"be.visible\").type(\"testpassword\");\n  cy.get(\"input[type='submit']\").should(\"be.visible\");\n  cy.should(\"exist\");\n});",
+              "err": {},
+              "uuid": "288b3183-7855-4e94-aa40-891bba6940d1",
+              "parentUUID": "b2e985d0-291f-420c-9cbe-7d7500b7c2d9",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "17c518ad-a4fc-4b6e-84b6-e3545365cb5d",
+            "288b3183-7855-4e94-aa40-891bba6940d1"
+          ],
+          "failures": [
+            "a2e67167-6272-46bf-a8f3-fbdeb0c015b7"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 20584,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "e7f97859-7773-43fb-aefa-74c7f5fc8d0e",
+      "title": "",
+      "fullFile": "cypress/e2e/RegisterPage.cy.js",
+      "file": "cypress/e2e/RegisterPage.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e319b972-7f1a-4660-b2d8-88a4c05a4c88",
+          "title": "Register page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "EXPECTED: Should take us to the register page",
+              "fullTitle": "Register page EXPECTED: Should take us to the register page",
+              "timedOut": null,
+              "duration": 13292,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"header\").first().as(\"header\").within(() => {\n  cy.get(\"[title='Sign up for a FREE Angelfire account']\").as(\"Register button\").click();\n});",
+              "err": {
+                "message": "CypressError: Timed out after waiting `10000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `10000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.config.js` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.",
+                "estack": "CypressError: Timed out after waiting `10000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `10000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.config.js` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.\n    at timedOutWaitingForPageLoad (https://www.angelfire.lycos.com/__cypress/runner/cypress_runner.js:130511:64)\n    at <unknown> (https://www.angelfire.lycos.com/__cypress/runner/cypress_runner.js:130827:16)\n    at tryCatcher (https://www.angelfire.lycos.com/__cypress/runner/cypress_runner.js:1807:23)\n    at <unknown> (https://www.angelfire.lycos.com/__cypress/runner/cypress_runner.js:4186:41)\n    at tryCatcher (https://www.angelfire.lycos.com/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise._settlePromiseFromHandler (https://www.angelfire.lycos.com/__cypress/runner/cypress_runner.js:1519:31)\n    at Promise._settlePromise (https://www.angelfire.lycos.com/__cypress/runner/cypress_runner.js:1576:18)\n    at Promise._settlePromise0 (https://www.angelfire.lycos.com/__cypress/runner/cypress_runner.js:1621:10)\n    at Promise._settlePromises (https://www.angelfire.lycos.com/__cypress/runner/cypress_runner.js:1697:18)\n    at _drainQueueStep (https://www.angelfire.lycos.com/__cypress/runner/cypress_runner.js:2407:12)\n    at _drainQueue (https://www.angelfire.lycos.com/__cypress/runner/cypress_runner.js:2400:9)\n    at Async._drainQueues (https://www.angelfire.lycos.com/__cypress/runner/cypress_runner.js:2416:5)\n    at Async.drainQueues (https://www.angelfire.lycos.com/__cypress/runner/cypress_runner.js:2286:14)",
+                "diff": null
+              },
+              "uuid": "e77a6afb-82d1-47ce-b595-d57d0a4747be",
+              "parentUUID": "e319b972-7f1a-4660-b2d8-88a4c05a4c88",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "ACTUAL: Page doesn't exist, or it doesn't load, so there should be nothing there",
+              "fullTitle": "Register page ACTUAL: Page doesn't exist, or it doesn't load, so there should be nothing there",
+              "timedOut": null,
+              "duration": 1853,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"header\").first().as(\"header\").within(() => {\n  cy.get(\"[title='Sign up for a FREE Angelfire account']\").as(\"Register button\");\n  cy.should(\"exist\");\n});",
+              "err": {},
+              "uuid": "87e0e0d0-e324-42d6-a74b-b988bc8322e2",
+              "parentUUID": "e319b972-7f1a-4660-b2d8-88a4c05a4c88",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "87e0e0d0-e324-42d6-a74b-b988bc8322e2"
+          ],
+          "failures": [
+            "e77a6afb-82d1-47ce-b595-d57d0a4747be"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 15145,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "f36caf6f-74ed-4c56-93bf-c6a94456d43e",
+      "title": "",
+      "fullFile": "cypress/e2e/WebsiteBuilder.cy.js",
+      "file": "cypress/e2e/WebsiteBuilder.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4055c766-b012-4709-8d86-f600620309de",
+          "title": "WebsiteBuilder",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "EXPECTED: Click the \"Website Builder\" button and open presentation page",
+              "fullTitle": "WebsiteBuilder EXPECTED: Click the \"Website Builder\" button and open presentation page",
+              "timedOut": null,
+              "duration": 15451,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('section[class=\"content hp\"]').within(() => {\n  cy.get('a[title=\"Learn about our Website Builder\"]').as(\"builderButton\").should(\"be.visible\").click();\n});\ncy.get('div[id=\"webBuilderIllustration\"]').should(\"be.visible\");\ncy.get('section[class=\"content\"]').within(() => {\n  cy.get(\"h2\").contains(\"professional\").first().as(\"description\").should(\"be.visible\");\n  cy.get(\"h3[class='signupAction']\").contains(\"Build a website now!\").should(\"be.visible\").click();\n  cy.get(\"p\").contains(\"Builder\").should(\"be.visible\");\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 5000ms: Expected to find element: `p`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 5000ms: Expected to find element: `p`, but never found it.\n    at Context.eval (webpack://code/./cypress/e2e/WebsiteBuilder.cy.js:24:9)",
+                "diff": null
+              },
+              "uuid": "240895d8-f754-4f17-a13a-fdb713abb2dc",
+              "parentUUID": "4055c766-b012-4709-8d86-f600620309de",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "ACTUAL: Click the \"Website Builder\" button and open presentation page, and then try to create website but be presented with register, which is now accessible, resulting in design flaw",
+              "fullTitle": "WebsiteBuilder ACTUAL: Click the \"Website Builder\" button and open presentation page, and then try to create website but be presented with register, which is now accessible, resulting in design flaw",
+              "timedOut": null,
+              "duration": 5961,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('section[class=\"content hp\"]').within(() => {\n  cy.get('a[title=\"Learn about our Website Builder\"]').as(\"builderButton\").should(\"be.visible\").click();\n});\ncy.get('div[id=\"webBuilderIllustration\"]').should(\"be.visible\");\ncy.get('section[class=\"content\"]').within(() => {\n  cy.get(\"h2\").contains(\"professional\").first().as(\"description\").should(\"be.visible\");\n  try {\n    cy.get(\"h3[class='signupAction']\").contains(\"Build a website now!\").should(\"be.visible\").click();\n  } catch (e) {\n    console.log(e);\n    cy.should(\"not.exist\");\n  }\n});",
+              "err": {},
+              "uuid": "2b9135be-565d-4402-83f9-486c281335d7",
+              "parentUUID": "4055c766-b012-4709-8d86-f600620309de",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "2b9135be-565d-4402-83f9-486c281335d7"
+          ],
+          "failures": [
+            "240895d8-f754-4f17-a13a-fdb713abb2dc"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 21412,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "2b28d688-216c-426b-9304-981cf16e580f",
+      "title": "",
+      "fullFile": "cypress/e2e/DomainChecker.cy.js",
+      "file": "cypress/e2e/DomainChecker.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "579591ea-e2df-49ad-8932-418829e3b8cf",
+          "title": "Domain checker",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "EXPECTED: should input a domain and check if it is available",
+              "fullTitle": "Domain checker EXPECTED: should input a domain and check if it is available",
+              "timedOut": null,
+              "duration": 8124,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('div[id=\"container\"]').should(\"be.visible\").within(() => {\n  cy.get('aside[class=\"callOuts\"]').should(\"be.visible\").within(() => {\n    cy.get('input[type=\"text\"]').type(\"test\");\n    cy.get('input[type=\"submit\"]').click();\n  });\n});\ncy.origin(\"https://domains.lycos.com/\", () => {\n  cy.get(\"p\").contains(\"domain is available\").should(\"be.visible\");\n});",
+              "err": {
+                "message": "CypressError: Timed out retrying after 5000ms: `cy.type()` failed because this element is not visible:\n\n`<input type=\"text\" maxlength=\"32\" name=\"search\" placeholder=\"your-domain.com\" class=\"mb10 domainCall\">`\n\nThis element `<input.mb10.domainCall>` is not visible because its parent `<section.content.dropShadow>` has CSS property: `display: none`\n\nFix this problem, or use `{force: true}` to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with",
+                "estack": "CypressError: Timed out retrying after 5000ms: `cy.type()` failed because this element is not visible:\n\n`<input type=\"text\" maxlength=\"32\" name=\"search\" placeholder=\"your-domain.com\" class=\"mb10 domainCall\">`\n\nThis element `<input.mb10.domainCall>` is not visible because its parent `<section.content.dropShadow>` has CSS property: `display: none`\n\nFix this problem, or use `{force: true}` to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n    at runVisibilityCheck (https://www.angelfire.lycos.com/__cypress/runner/cypress_runner.js:145671:58)\n    at Object.isStrictlyVisible (https://www.angelfire.lycos.com/__cypress/runner/cypress_runner.js:145685:10)\n    at runAllChecks (https://www.angelfire.lycos.com/__cypress/runner/cypress_runner.js:112773:26)\n    at retryActionability (https://www.angelfire.lycos.com/__cypress/runner/cypress_runner.js:112841:16)\n    at tryCatcher (https://www.angelfire.lycos.com/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise.attempt.Promise.try (https://www.angelfire.lycos.com/__cypress/runner/cypress_runner.js:4315:29)\n    at whenStable (https://www.angelfire.lycos.com/__cypress/runner/cypress_runner.js:144459:68)\n    at <unknown> (https://www.angelfire.lycos.com/__cypress/runner/cypress_runner.js:144400:14)\n    at tryCatcher (https://www.angelfire.lycos.com/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise._settlePromiseFromHandler (https://www.angelfire.lycos.com/__cypress/runner/cypress_runner.js:1519:31)\n    at Promise._settlePromise (https://www.angelfire.lycos.com/__cypress/runner/cypress_runner.js:1576:18)\n    at Promise._settlePromise0 (https://www.angelfire.lycos.com/__cypress/runner/cypress_runner.js:1621:10)\n    at Promise._settlePromises (https://www.angelfire.lycos.com/__cypress/runner/cypress_runner.js:1701:18)\n    at Promise._fulfill (https://www.angelfire.lycos.com/__cypress/runner/cypress_runner.js:1645:18)\n    at <unknown> (https://www.angelfire.lycos.com/__cypress/runner/cypress_runner.js:5450:46)\nFrom Your Spec Code:\n    at Context.eval (webpack://code/./cypress/e2e/DomainChecker.cy.js:12:41)",
+                "diff": null
+              },
+              "uuid": "95a6477e-b1e5-49d5-a1bc-a367f0d3df89",
+              "parentUUID": "579591ea-e2df-49ad-8932-418829e3b8cf",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "ACTUAL: should input a domain and redirect us to another origin",
+              "fullTitle": "Domain checker ACTUAL: should input a domain and redirect us to another origin",
+              "timedOut": null,
+              "duration": 5443,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('div[id=\"container\"]').should(\"be.visible\").within(() => {\n  cy.get('aside[class=\"callOuts\"]').should(\"be.visible\").within(() => {\n    cy.get('input[type=\"text\"]').type(\"test\");\n    cy.get('input[type=\"submit\"]').click();\n  });\n});",
+              "err": {},
+              "uuid": "2e7fa199-6ca5-42c5-a791-80b67c74c2c2",
+              "parentUUID": "579591ea-e2df-49ad-8932-418829e3b8cf",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "2e7fa199-6ca5-42c5-a791-80b67c74c2c2"
+          ],
+          "failures": [
+            "95a6477e-b1e5-49d5-a1bc-a367f0d3df89"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 13567,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mocha",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+Questions to ask:
+• Do we have the right specification?
+• Do we have the current version?
+• Is the spec kept under source control?
+• How do we verify the version?
+• Is this a stable specification?
+• Is the product under change control?
+• Is the spec under change control?

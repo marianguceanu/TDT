@@ -1,0 +1,148 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 2,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-05-17T16:19:28.705Z",
+    "end": "2024-05-17T16:19:52.779Z",
+    "duration": 24074,
+    "testsRegistered": 3,
+    "passPercent": 66.66666666666666,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "4e6cf73e-bee5-4caa-b7a7-50526028d4f5",
+      "title": "",
+      "fullFile": "cypress/e2e/Login.cy.js",
+      "file": "cypress/e2e/Login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b2e985d0-291f-420c-9cbe-7d7500b7c2d9",
+          "title": "Login form",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "EXPECTED: Should open the login form. complete the form then invalidate the request because register was unsucessful",
+              "fullTitle": "Login form EXPECTED: Should open the login form. complete the form then invalidate the request because register was unsucessful",
+              "timedOut": null,
+              "duration": 14690,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"header\").first().as(\"header\").within(() => {\n  cy.get(\"[title='Login']\").as(\"Login button\").click();\n  cy.log(\"Opening login form\");\n  cy.get(\"input[id='username']\").should(\"be.visible\").type(\"testuser\");\n  cy.get(\"input[id='passWORD']\").should(\"be.visible\").type(\"testpassword\");\n  cy.log(\"Submitting login form will send us to an unavailable page, that cannot be accessed, therefore test will fail\");\n  cy.get(\"input[type='submit']\").click();\n});",
+              "err": {
+                "message": "CypressError: Timed out after waiting `10000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `10000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.config.js` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.",
+                "estack": "CypressError: Timed out after waiting `10000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `10000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.config.js` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.\n    at timedOutWaitingForPageLoad (https://www.angelfire.lycos.com/__cypress/runner/cypress_runner.js:130511:64)\n    at <unknown> (https://www.angelfire.lycos.com/__cypress/runner/cypress_runner.js:130827:16)\n    at tryCatcher (https://www.angelfire.lycos.com/__cypress/runner/cypress_runner.js:1807:23)\n    at <unknown> (https://www.angelfire.lycos.com/__cypress/runner/cypress_runner.js:4186:41)\n    at tryCatcher (https://www.angelfire.lycos.com/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise._settlePromiseFromHandler (https://www.angelfire.lycos.com/__cypress/runner/cypress_runner.js:1519:31)\n    at Promise._settlePromise (https://www.angelfire.lycos.com/__cypress/runner/cypress_runner.js:1576:18)\n    at Promise._settlePromise0 (https://www.angelfire.lycos.com/__cypress/runner/cypress_runner.js:1621:10)\n    at Promise._settlePromises (https://www.angelfire.lycos.com/__cypress/runner/cypress_runner.js:1697:18)\n    at _drainQueueStep (https://www.angelfire.lycos.com/__cypress/runner/cypress_runner.js:2407:12)\n    at _drainQueue (https://www.angelfire.lycos.com/__cypress/runner/cypress_runner.js:2400:9)\n    at Async._drainQueues (https://www.angelfire.lycos.com/__cypress/runner/cypress_runner.js:2416:5)\n    at Async.drainQueues (https://www.angelfire.lycos.com/__cypress/runner/cypress_runner.js:2286:14)",
+                "diff": null
+              },
+              "uuid": "a2e67167-6272-46bf-a8f3-fbdeb0c015b7",
+              "parentUUID": "b2e985d0-291f-420c-9cbe-7d7500b7c2d9",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "ACTUAL: Page doesn't exist, or it doesn't load, so there is nothing there",
+              "fullTitle": "Login form ACTUAL: Page doesn't exist, or it doesn't load, so there is nothing there",
+              "timedOut": null,
+              "duration": 3028,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"header\").first().as(\"header\").within(() => {\n  cy.get(\"[title='Login']\").as(\"Login button\").should(\"be.visible\").click();\n  cy.log(\"Opening login form\");\n  cy.get(\"input[id='username']\").should(\"be.visible\").type(\"testuser\");\n  cy.get(\"input[id='passWORD']\").should(\"be.visible\").type(\"testpassword\");\n  cy.log(\"Submitting login form will send us to an unavailable page, that cannot be accessed\");\n  cy.get(\"input[type='submit']\").should(\"be.visible\");\n  cy.should(\"exist\");\n});",
+              "err": {},
+              "uuid": "17c518ad-a4fc-4b6e-84b6-e3545365cb5d",
+              "parentUUID": "b2e985d0-291f-420c-9cbe-7d7500b7c2d9",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should contain a form, and not a new page, to prove design incosistency",
+              "fullTitle": "Login form Should contain a form, and not a new page, to prove design incosistency",
+              "timedOut": null,
+              "duration": 2866,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"header\").first().as(\"header\").within(() => {\n  cy.get(\"[title='Login']\").as(\"Login button\").should(\"be.visible\").click();\n  cy.log(\"Opening login form\");\n  cy.get(\"input[id='username']\").should(\"be.visible\").type(\"testuser\");\n  cy.get(\"input[id='passWORD']\").should(\"be.visible\").type(\"testpassword\");\n  cy.get(\"input[type='submit']\").should(\"be.visible\");\n  cy.should(\"exist\");\n});",
+              "err": {},
+              "uuid": "288b3183-7855-4e94-aa40-891bba6940d1",
+              "parentUUID": "b2e985d0-291f-420c-9cbe-7d7500b7c2d9",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "17c518ad-a4fc-4b6e-84b6-e3545365cb5d",
+            "288b3183-7855-4e94-aa40-891bba6940d1"
+          ],
+          "failures": [
+            "a2e67167-6272-46bf-a8f3-fbdeb0c015b7"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 20584,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mocha",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

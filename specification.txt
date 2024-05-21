@@ -1,0 +1,7 @@
+• For every statement or fact found in the specification the tester should create:
+• at least one test that tries to check the program behaviour if the statement is false;
+• several tests that vary the parameters of the statement, e.g., test boundary conditions;
+• several tests of the reasonable implications of the statement;
+• several tests of this statement in conjunction with related statements;
+• several tests of scenarios that apply the statement in the process of achieving a program
+benefit.

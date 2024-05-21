@@ -1,0 +1,9 @@
+User Interface Testing. Definition
+• User Interface Testing checks if the UI elements have been implemented correctly.
+• User interface testing is NOT about:
+• whether the UI is well designed or
+• easy to understand or
+• easy to work with.
+• All from above are aspects related to usability testing.
+Coverage: user interface testing covers all the elements of the user interface
+(the dialogs, menus, pull-down lists, and all the other UI controls)

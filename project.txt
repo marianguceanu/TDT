@@ -1,0 +1,48 @@
+SITE: https://www.angelfire.lycos.com/
+
+You are part of the testing team that joined early in the project, two months before product release. 
+You are junior testers and this is your first testing project. 
+
+Part I: 
+The project manager wants you to perform specification-based testing. 
+The product specifications are explicit and implicit as well. 
+Use two types of implicit specifications. 
+
+Specification based testing:
+
+EXPLICIT SPECIFICATIONS:
+1. The user must be able to register and login.
+	1.1. "Register" button should create an account and login the user.
+	1.2. "Login" button should redirect the user to the login page.
+2. Product should offer templates to design a website.
+	2.1. The user should be able to choose a template.
+	2.2. The user should be able to edit the template.
+3. The user should be able to publish the website.
+4. End product should allow the user to enroll and manage PayPal-related issues.
+
+IMPLICIT SPECIFICATIONS:
+1. The user should be able to access the website from any browser. (Mobile, Desktop)
+2 "Website Builder" button should redirect the user to the website builder presentation page.
+3. Design should be consistent throughout the website. (No matter the page)
+4. Page loading time should be less than 5 seconds throughout the website.
+5. Advertisement should be present on the website.
+6. The website should be secure
+
+
+
+Part II. Team-specific information objectives.
+Check for hidden features and additional features that are not mentioned in the specifications.
+Find as many as possible and test them.
+Write a report on your findings and testing results.
+
+
+
+Requirements-based Testing. 
+1. Testing the intended purpose of the website.
+2. Checking for additional features.
+3. Testing the in-case additional features.
+4. Checking the website's compatibility browsers and platforms.
+5. Measuring the website's performance and time-complexity related issues. (loading time, page switching ...)
+6. Enforcing the website's security. (Cookies, Local storage, credentials management ...)
+7. Testing the website's usability. (User-friendly, easy to navigate, easy to understand ...)
+8. Testing the website's reliability. (No crashes, no bugs, no errors ...)

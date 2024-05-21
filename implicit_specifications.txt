@@ -1,0 +1,10 @@
+Examples of implicit specifications:
+• Published style guide and UI standards;
+	• Published standards (such as C-language or IEEE Floating Point);
+• Product literature (advertisements and other promotional documents);
+• Sales presentations;
+	• Software change memos that come with each new internal version of the program.
+• Bug reports and responses to them;
+	• Look at customer call records from the previous version. What bugs were found in the field?
+• Usability test results and corporate responses to them;
+• Prototypes and lab notes on the product; NOTE: Investigate in the site

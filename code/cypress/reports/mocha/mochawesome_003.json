@@ -1,0 +1,129 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-05-17T16:20:15.562Z",
+    "end": "2024-05-17T16:20:39.732Z",
+    "duration": 24170,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f36caf6f-74ed-4c56-93bf-c6a94456d43e",
+      "title": "",
+      "fullFile": "cypress/e2e/WebsiteBuilder.cy.js",
+      "file": "cypress/e2e/WebsiteBuilder.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4055c766-b012-4709-8d86-f600620309de",
+          "title": "WebsiteBuilder",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "EXPECTED: Click the \"Website Builder\" button and open presentation page",
+              "fullTitle": "WebsiteBuilder EXPECTED: Click the \"Website Builder\" button and open presentation page",
+              "timedOut": null,
+              "duration": 15451,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('section[class=\"content hp\"]').within(() => {\n  cy.get('a[title=\"Learn about our Website Builder\"]').as(\"builderButton\").should(\"be.visible\").click();\n});\ncy.get('div[id=\"webBuilderIllustration\"]').should(\"be.visible\");\ncy.get('section[class=\"content\"]').within(() => {\n  cy.get(\"h2\").contains(\"professional\").first().as(\"description\").should(\"be.visible\");\n  cy.get(\"h3[class='signupAction']\").contains(\"Build a website now!\").should(\"be.visible\").click();\n  cy.get(\"p\").contains(\"Builder\").should(\"be.visible\");\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 5000ms: Expected to find element: `p`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 5000ms: Expected to find element: `p`, but never found it.\n    at Context.eval (webpack://code/./cypress/e2e/WebsiteBuilder.cy.js:24:9)",
+                "diff": null
+              },
+              "uuid": "240895d8-f754-4f17-a13a-fdb713abb2dc",
+              "parentUUID": "4055c766-b012-4709-8d86-f600620309de",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "ACTUAL: Click the \"Website Builder\" button and open presentation page, and then try to create website but be presented with register, which is now accessible, resulting in design flaw",
+              "fullTitle": "WebsiteBuilder ACTUAL: Click the \"Website Builder\" button and open presentation page, and then try to create website but be presented with register, which is now accessible, resulting in design flaw",
+              "timedOut": null,
+              "duration": 5961,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('section[class=\"content hp\"]').within(() => {\n  cy.get('a[title=\"Learn about our Website Builder\"]').as(\"builderButton\").should(\"be.visible\").click();\n});\ncy.get('div[id=\"webBuilderIllustration\"]').should(\"be.visible\");\ncy.get('section[class=\"content\"]').within(() => {\n  cy.get(\"h2\").contains(\"professional\").first().as(\"description\").should(\"be.visible\");\n  try {\n    cy.get(\"h3[class='signupAction']\").contains(\"Build a website now!\").should(\"be.visible\").click();\n  } catch (e) {\n    console.log(e);\n    cy.should(\"not.exist\");\n  }\n});",
+              "err": {},
+              "uuid": "2b9135be-565d-4402-83f9-486c281335d7",
+              "parentUUID": "4055c766-b012-4709-8d86-f600620309de",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "2b9135be-565d-4402-83f9-486c281335d7"
+          ],
+          "failures": [
+            "240895d8-f754-4f17-a13a-fdb713abb2dc"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 21412,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mocha",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
